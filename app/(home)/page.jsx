@@ -4,7 +4,7 @@ import { HERO } from '@/constants.js'
 
 const page = () => {
   return (
-    <div>
+    <div className='main'>
       {
         HERO.map((person) => {
           // console.log(person.name)
@@ -17,6 +17,7 @@ const page = () => {
             imgSrc2={person.imgSrc2}
             link={person.link}
             bg={person.bg}
+            id={person.id}
           />
         })
       }

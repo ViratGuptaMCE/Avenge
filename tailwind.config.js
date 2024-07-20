@@ -20,7 +20,12 @@ module.exports = {
       gridTemplateColumns: {
         header: "5% repeat(2,1fr) 5%",
         main: "5% 1fr 1fr 1fr 5%",
+        main_small: "5% 1fr 5%",
+        detail: "1fr 2fr"
       },
+      gridTemplateRows: {
+        main_small : "10% 2fr 1fr 6%"
+      }
     },
   },
   plugins: [],

@@ -6,6 +6,7 @@ export const HERO = [
     imgSrc1: "/marvimgs/IronMan/image1x1.png",
     imgSrc2: "/marvimgs/IronMan/image2x1.png",
     link: "iron",
+    id :1,
     bg: "radial-gradient(circle at 60%,#7c0000 0%,#000000 100%)",
   },
   {
@@ -15,6 +16,7 @@ export const HERO = [
     imgSrc1: "/marvimgs/Hulk/image1x1.png",
     imgSrc2: "/marvimgs/Hulk/image2x1.png",
     link: "hulk",
+    id :2,
     bg: "radial-gradient(circle at 60%,#026302 0%,#000000 100%)",
   },
   {
@@ -24,6 +26,7 @@ export const HERO = [
     imgSrc1: "/marvimgs/Captain/image1x1.png",
     imgSrc2: "/marvimgs/Captain/image2x1.png",
     link: "captain",
+    id :3,
     bg: "radial-gradient(circle at 60%,#021b6f 0%,#460204 70%,#000000 100%)",
   },
   {
@@ -33,6 +36,7 @@ export const HERO = [
     imgSrc1: "/marvimgs/Thor/image1x1.png",
     imgSrc2: "/marvimgs/Thor/image2x1.png",
     link: "thor",
+    id :4,
     bg: "radial-gradient(circle at 60%,#e4eaec 0%,#040274 50%,#000000 100%)",
   },
   {
@@ -42,6 +46,7 @@ export const HERO = [
     imgSrc1: "/marvimgs/Widow/image1x1.png",
     imgSrc2: "/marvimgs/Widow/image2x1.png",
     link: "widow",
+    id :5,
     bg: "radial-gradient(circle at 60%,#ffffff 0%,#000000 100%)",
   },
   {
@@ -51,6 +56,7 @@ export const HERO = [
     imgSrc1: "/marvimgs/Hawk/image1x1.png",
     imgSrc2: "/marvimgs/Hawk/image2x1.png",
     link: "hawk",
+    id :6,
     bg: " radial-gradient(circle at 60%,#500e0e 0%,#000000 100%)",
   },
 ];
