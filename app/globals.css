@@ -6,10 +6,9 @@
 *{
   margin: 0;
   padding: 0;
-  color: black;
+  color: aliceblue;
   box-sizing: border-box;
 }
-
 
 @font-face{
   font-family: Avengers;
@@ -24,4 +23,8 @@
  
 body{
   font-family: Avengers;
+}
+.sketch{
+  text-decoration: none;
+  font-family: Sketch;
 }

@@ -19,6 +19,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         header: "5% repeat(2,1fr) 5%",
+        main: "5% 1fr 1fr 1fr 5%",
       },
     },
   },

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 const Header = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+  // console.log(isOpen);
   return (
     <header className={className}>
       <nav className="w-full min-h-[80px] max-h-[150px] grid grid-cols-header grid-rows-2 px-[30px] py-[10px] ">
