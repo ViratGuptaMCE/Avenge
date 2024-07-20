@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        backColor: {
+          1: "#e4eaec1a",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      gridTemplateColumns: {
+        header: "5% repeat(2,1fr) 5%",
       },
     },
   },
