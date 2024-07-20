@@ -1,17 +1,20 @@
 'use client'
-import React, { useState } from 'react'
+import { scrollPositionContext } from '@/contexts/contexts';
+import React, { useContext, useState } from 'react'
 
 const Hero = (props) => {
   // console.log(props.name);
   const [hovered, setHovered] = useState(false)
+  const posContext = useContext(scrollPositionContext);
   // console.log(hovered)
   return (
     <section
-      className={`iron h-[100vh] m-0 p-0 w-full grid grid-cols-main`}
+      className={`iron h-[100vh] m-0 p-0 w-full grid grid-cols-main snap-center`}
       id={`${props.id}`}
       style={{
         background: props.bg,
       }}
+      onMouseEnter={()=> posContext.setValue(props.id)}
     >
       <div className="details flex flex-col col-start-2 col-end-3 mb-[30px] self-end">
         <a href="iron.html" className="sketch text-[120px]">

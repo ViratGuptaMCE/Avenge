@@ -1,7 +1,10 @@
 'use client'
+import { scrollPositionContext } from '@/contexts/contexts';
 import React from 'react'
+import { useContext } from 'react';
 
 const PageScroller = () => {
+  const posContext = useContext(scrollPositionContext);
   return (
     <div className="pages">
       {Array.from({ length: 6 }, (_, ind) => (
@@ -12,11 +15,11 @@ const PageScroller = () => {
           onClick={(e) => {
             e.preventDefault();
             const heroSection = document.getElementById(`${ind + 1}`);
-            console.log(heroSection)
+            posContext.setValue(ind + 1);
             heroSection && heroSection.scrollIntoView({ behavior: "smooth" });
           }}
         >
-          <div className="circle"></div>
+          <div className={`circle ${posContext.value ===ind+1 ?'active' : ''}`}></div>
           <div className="index">{ind + 1}</div>
         </a>
       ))}
