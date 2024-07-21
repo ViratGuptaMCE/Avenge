@@ -17,7 +17,7 @@ const Hero = (props) => {
       onMouseEnter={()=> posContext.setValue(props.id)}
     >
       <div className="details flex flex-col col-start-2 col-end-3 mb-[30px] self-end">
-        <a href="iron.html" className="sketch text-[120px]">
+        <a href={`/hero/${props.link}`} className="sketch text-[120px]">
           {props.letter}
         </a>
         <h1 className="name text-[50px]">{props.name}</h1>

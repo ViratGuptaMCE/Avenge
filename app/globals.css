@@ -29,35 +29,8 @@ body{
   font-family: Sketch;
 }
 
-.pages {
-  position: fixed;
-  top: 50%;
-  right: 5%;
-  height: 30%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  transform: translate(-5%, -50%);
-}
-.pages a {
-  display: flex;
-  text-decoration: none;
-}
-.pages a div{
-  opacity: 0.5;
-}
-.pages .active{
-  opacity: 1;
-}
-.circle {
-  background-color: white;
-  width: 15px;
-  height: 15px;
-  margin-right: 10px;
-  border-radius: 50%;
-  align-self: center;
-  opacity: 1;
-}
+
+
 .pages a:hover .circle {
   animation: dot 0.5s 0s ease-in-out infinite alternate;
 }
