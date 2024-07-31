@@ -1,9 +1,9 @@
+import HeroLandingPage from '@/components/heroLanding'
 import React from 'react'
 
 const Page = ({params}) => {
-  console.log(params)
   return (
-    <div className='text-black'>Hello {params.slug}</div>
+    <HeroLandingPage page={params.slug} />
   )
 }
 

@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import plugin from 'tailwindcss'
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -21,12 +24,28 @@ module.exports = {
         header: "5% repeat(2,1fr) 5%",
         main: "5% 1fr 1fr 1fr 5%",
         main_small: "5% 1fr 5%",
-        detail: "1fr 2fr"
+        detail: "1fr 2fr",
       },
       gridTemplateRows: {
-        main_small : "10% 2fr 1fr 6%"
-      }
+        main_small: "10% 2fr 1fr 6%",
+      },
+      fontFamily: {
+        descript: ["Descript", "sans-serif"],
+        sketch: ["Sketch", "serif"],
+        avengers: ["Avengers"],
+      },
+      textShadow: {
+        h1: "3px 3px 5px grey",
+        stick: "3px 3px 0px var(--tw-shadow-color)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        { "text-shadow": (value) => ({ textShadow: value }) },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };
