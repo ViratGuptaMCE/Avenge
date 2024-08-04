@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { Environment, OrbitControls, useHelper } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense, useEffect, useRef, useState } from "react";
-import ModernModel from "./ModernPortal";
+import ModernModel from "../Portals/ModernPortal";
 import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
 
 // // import { SpotLightHelper } from "three";
@@ -26,17 +26,16 @@ import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHel
 //   );
 // }
 
-
 const Model = () => {
   const gltf = useLoader(GLTFLoader, "/assets/IronMan85/scene.gltf");
   return (
     <>
-      <primitive object={gltf.scene} scale={4} position={[0,-4.4,-2] } />
+      <primitive object={gltf.scene} scale={4} position={[0, -4.4, -2]} />
     </>
   );
 };
 
-const Lights = ({Beamcolor}) => {
+const Lights = ({ Beamcolor }) => {
   const rectLightRef = useRef(null);
 
   useHelper(rectLightRef, RectAreaLightHelper, `hsl(${Beamcolor}, 100%, 50%)`);
@@ -71,23 +70,18 @@ const Lights = ({Beamcolor}) => {
       <directionalLight castShadow={true} position={[0, 1, 2]} intensity={5} />
     </>
   );
-}
-
-
+};
 
 export default function Iron3D() {
-  const [colour,setColour] = useState(1);
+  const [colour, setColour] = useState(1);
 
   useEffect(() => {
     setColour(colour + 1);
-  })
-  
-  
+  });
 
   return (
     <div className="App h-[100vh]">
       <Canvas shadows>
-          
         <Suspense fallback={null}>
           {/* <SpotLightWithHelper /> */}
           <Model />
@@ -102,8 +96,7 @@ export default function Iron3D() {
             intensity={2}
           /> */}
 
-          
-          <Lights Beamcolor={colour}/>
+          <Lights Beamcolor={colour} />
           {/* <ambientLight intensity={10} /> */}
           <ModernModel
             rotation={[0, -Math.PI / 2, 0]}
