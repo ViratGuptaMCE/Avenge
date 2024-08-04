@@ -8,7 +8,7 @@ import ButtonPortal from '../Portals/ButtonPortal';
 
 export function Model(props) {
   const { nodes, materials } = useGLTF(
-    "/assets/hawk/hawkeye.glb"
+    "/assets/heros/hawkeye.glb"
   );
   // const bodyMap = useLoader(TextureLoader,'/assets/hawk/Body_S2.png')
 

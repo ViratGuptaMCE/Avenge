@@ -4,7 +4,7 @@ import { Environment, OrbitControls, useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
 function Model(props) {
-  const { nodes, materials } = useGLTF('/assets/Captain.glb')
+  const { nodes, materials } = useGLTF('/assets/heros/Captain.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[0, -5.03, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={2.54}>

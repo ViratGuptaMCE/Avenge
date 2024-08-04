@@ -7,7 +7,7 @@ import { TowerPortal } from '../Portals/TowerPortal'
 import { Galaxy } from '../Others/Galaxy'
 
 const Model = (props) => {
-  const gltf = useLoader(GLTFLoader, "/assets/black/black_widow.glb")
+  const gltf = useLoader(GLTFLoader, "/assets/heros/black_widow.glb")
   
   return (
     <>
