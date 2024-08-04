@@ -11,7 +11,7 @@ import React, { Suspense, useEffect, useRef } from "react";
 import { useGLTF, useAnimations, Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import GreenPortal from "../Portals/GreenPortal";
-import PlatformGrass from "../Portals/PlatformGrass";
+import PlatformGrass from "../Others/PlatformGrass";
 
 const Model = (props) => {
   const groupRef = useRef();
@@ -66,41 +66,6 @@ export default function Hulk3D(props) {
   return (
     <div className="App h-[100vh]">
       <Canvas shadows>
-        {/* <group ref={groupRef} {...props} dispose={null}>
-          <group name="Sketchfab_Scene">
-            <group
-              name="Sketchfab_model"
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={190.71}
-            >
-              <group
-                name="89a0edea80c643ed8969a44ecbfabaf6fbx"
-                rotation={[Math.PI / 2, 0, 0]}
-                scale={0.01}
-              >
-                <group name="Object_2">
-                  <group name="RootNode">
-                    <group name="ST_Ent_Hulk">
-                      <group name="Object_5">
-                        <primitive object={nodes._rootJoint} />
-                        <skinnedMesh
-                          name="Object_7"
-                          geometry={nodes.Object_7.geometry}
-                          material={
-                            materials[
-                              "3DFEE2D464B36A2CF6339AE6DEABE501946879A5"
-                            ]
-                          }
-                          skeleton={nodes.Object_7.skeleton}
-                        />
-                      </group>
-                    </group>
-                  </group>
-                </group>
-              </group>
-            </group>
-          </group>
-        </group> */}
         <Suspense fallback={null}>
           <ambientLight intensity={7}/>
           <OrbitControls />
