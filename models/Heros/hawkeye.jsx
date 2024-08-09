@@ -5,6 +5,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas, useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 import ButtonPortal from '../Portals/ButtonPortal';
+import { Space } from '../Others/Space';
 
 export function Model(props) {
   const { nodes, materials } = useGLTF(
@@ -47,6 +48,7 @@ const Hawk3D = () => {
           <ButtonPortal scale={4} position={[0,-1.8,0] } />
           <ambientLight intensity={12} />
           <OrbitControls />
+          <Space scale={100} />
         </Suspense>
       </Canvas>
     </div>

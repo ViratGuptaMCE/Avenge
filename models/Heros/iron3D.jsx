@@ -75,9 +75,9 @@ const Lights = ({ Beamcolor }) => {
 export default function Iron3D() {
   const [colour, setColour] = useState(1);
 
-  useEffect(() => {
-    setColour(colour + 1);
-  });
+  // useEffect(() => {
+  //   setColour(colour + 1);
+  // });
 
   return (
     <div className="App h-[100vh]">
