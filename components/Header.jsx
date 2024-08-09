@@ -102,7 +102,7 @@ const Header = ({ className }) => {
             <p>www.getout#joke.comforyou</p>
           </div>
           <div className="social" ref={social}>
-            <h3>Unsocial</h3>
+            <a href={'/heromodel'}>Models</a>
             <p>Twitter</p>
           </div>
         </div>
