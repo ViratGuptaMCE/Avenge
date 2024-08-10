@@ -19,7 +19,7 @@
 *{
   margin: 0;
   padding: 0;
-  color: aliceblue;
+  /* color: aliceblue; */
   box-sizing: border-box;
 }
 
@@ -105,3 +105,46 @@ body{
   letter-spacing: 5px;
   text-shadow: white 3px 3px 5px;
 }
+
+svg path{
+  stroke: blue;
+  stroke-dasharray: 308px;
+  stroke-dashoffset: 308px;
+}
+svg:hover path{
+  animation: logomate 3s ease 3 alternate forwards;
+}
+@keyframes logomate{
+  0%{
+    stroke: red;
+    stroke-dashoffset: 308px;
+    fill-opacity: 0;
+  }
+  80%{
+    stroke :red;
+    fill-opacity: 0;
+  }
+  100%{
+    stroke : white;
+    stroke-dashoffset: 0px;
+    fill-opacity: 1;
+  }
+  
+}
+/* .blob{
+  animation: morph 5s ease infinite alternate forwards;
+}
+@keyframes morph {
+  0%{
+    border-radius: 42% 56% 72% 28% /  42% 42% 56% 48%;
+  }
+  33%{
+    border-radius: 72% 28% 48% 48% /  28% 28% 72% 72%;
+  }
+  66%{
+    border-radius: 42% 56% 72% 28% /  42% 42% 56% 48%;
+  }
+  100%{
+    border-radius: 100% 56% 56% 100% /  100% 100% 56% 56%;
+  }
+} */

@@ -79,13 +79,13 @@ const Header = ({ className }) => {
           className=" align-middle row-start-1 col-start-3 row-end-2 cursor-pointer justify-self-end col-end-4"
           onClick={(e) => {
             e.preventDefault();
-            if(isOpen===false)  {
+            if (isOpen === false) {
               setIsOpen(!isOpen);
               // console.log(isOpen);
               animateHead();
             } else {
               animateHead();
-              setTimeout(() => setIsOpen(!isOpen),1400);
+              setTimeout(() => setIsOpen(!isOpen), 1400);
             }
           }}
         />
@@ -94,16 +94,19 @@ const Header = ({ className }) => {
             !isOpen
               ? "hidden"
               : "flex justify-around items-center text-center backdrop-blur-[5px] bg-backColor-1"
-            } `}
+          } `}
           ref={navOpen}
         >
           <div className="contact" ref={contact}>
             <h3>Contact</h3>
             <p>www.getout#joke.comforyou</p>
           </div>
-          <div className="social" ref={social}>
-            <a href={'/heromodel'}>Models</a>
-            <p>Twitter</p>
+          <div
+            className="social font-descript text-2xl flex w-[40%] justify-evenly"
+            ref={social}
+          >
+            <a href={"/heromodel"}>Models</a>
+            <a href={"/shop"}>Shop</a>
           </div>
         </div>
       </nav>
