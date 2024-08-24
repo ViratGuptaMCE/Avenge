@@ -1,22 +1,30 @@
-import React from 'react'
+'use client'
+import React, { useRef, useState } from 'react'
+import Link from 'next/link';
+import { Input } from 'postcss';
 
 const ShopHeader = () => {
+  const [isSearch, setisSearch] = useState(false);
+  const first = useRef();
   return (
-    <div className="text-black  min-h-[60px] flex justify-center align-center">
-      <div className="logo flex justify-center align-center">
-        <div className='relative w-[80px] overflow-hidden'>
-          <img src="/svgs/blob.svg" className="absolute h-full w-full z-[-10]"></img>
+    <div className="text-black  min-h-[60px] flex-between mx-8">
+      <div className="logo flex-center">
+        <div className="relative w-[80px] overflow-hidden">
+          <img
+            src="/svgs/blob.svg"
+            className="absolute h-full w-full z-[-10]"
+          ></img>
           <svg
-          viewBox="0 0 76 76"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-          baseProfile="full"
-          enable-background="new 0 0 76.00 76.00"
-          xmlSpace="preserve"
-          fill="#ffffff"
-          stroke="#ffffff"
-          className="w-full scale-125"
+            viewBox="0 0 76 76"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            baseProfile="full"
+            enable-background="new 0 0 76.00 76.00"
+            xmlSpace="preserve"
+            fill="#ffffff"
+            stroke="#ffffff"
+            className="w-full scale-125"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -35,7 +43,30 @@ const ShopHeader = () => {
             </g>
           </svg>
         </div>
-        <h1 className='self-center text-[30px] text-red-600'>AvengeStore</h1>
+        <h1 className="self-center text-[30px] text-red-600">AvengeStore</h1>
+      </div>
+      <div className="navigation w-[40%]">
+        <nav className="flex-between">
+          <div className="flex-center">
+            {isSearch && <input type="text" placeholder='search' className='w-[30px] text-xl'/>}
+            <img
+              src="/svgs/search.svg"
+              alt=""
+              width={25}
+              className=" transition-all hover:scale-125"
+              onClick={() =>setisSearch(!isSearch)}
+            />
+          </div>
+          <Link href="./" className="font-descript text-2xl ">
+            Home
+          </Link>
+          <Link href="./" className="font-descript text-2xl ">
+            Login
+          </Link>
+          <Link href="./" className="font-descript text-2xl ">
+            Cart
+          </Link>
+        </nav>
       </div>
     </div>
   );

@@ -16,6 +16,24 @@
 @tailwind utilities;
 
 
+@layer utilities{
+    .flex-center{
+      @apply flex justify-center items-center;
+    }
+    .flex-between{
+      @apply flex justify-between items-center;
+    }
+    .glassmorphism{
+      background: rgba(21, 20, 20, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    .glassmorphism2{
+      background: rgba(255, 255, 255, 0.146);
+      backdrop-filter: blur(5px);
+    }
+  }
+
+  
 *{
   margin: 0;
   padding: 0;
