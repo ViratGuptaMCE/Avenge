@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face{
   font-family: Avengers;
   src: url(/font/Avengers/AvengeanceHeroicAvengerBold-MM2J.ttf);
@@ -11,7 +12,6 @@
   src: url(/font/Descript/AfterDisaster-BzG3.ttf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 @tailwind base;
@@ -199,4 +199,90 @@ svg:hover path{
   background-color: transparent;
   color: aliceblue;
   border: 1px solid #eee;
+}
+
+
+
+/* Thumbnail */
+.thumbs{
+  font-family: Poppins;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+
+.thumbs .item{
+  width: 150px;
+  height: 240px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.thumbs .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  border-radius: 20px;
+}
+
+.thumbs .item .content{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.thumbs .item .content .title{
+  font-weight: bold;
+}
+
+
+.arrows{
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.arrows button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(35, 38, 40, 0.347);
+  color: aliceblue;
+  font-weight: bold;
+  font-size: large;
+  transition: .5s;
+}
+.arrows button:hover{
+  background-color: #eee;
+  color : #555;
+}
+
+.carousel .list .item:nth-child(1){
+  z-index: 1;
+}
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .brief,
+.carousel .list .item:nth-child(1) .buttons{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+  to{
+    opacity: 1;
+  }
 }

@@ -6,13 +6,10 @@ const ShopHeader = () => {
   const [isSearch, setisSearch] = useState(false);
   const first = useRef();
   return (
-    <div className="text-black bg-headBg min-h-[60px] flex-between px-8">
+    <div className="text-black bg-headBg# bg-[#ffcc00] min-h-[60px] flex-between px-8">
       <div className="logo flex-center">
         <div className="relative w-[80px] overflow-hidden">
-          <img
-            src="/svgs/blob.svg"
-            className="absolute h-full w-full"
-          ></img>
+          <img src="/svgs/blob.svg" className="absolute h-full w-full"></img>
           <svg
             viewBox="0 0 76 76"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,18 +39,26 @@ const ShopHeader = () => {
             </g>
           </svg>
         </div>
-        <h1 className="self-center text-[30px] text-red-600 drop-shadow-2xl">AvengeStore</h1>
+        <h1 className="self-center text-[30px] text-red-600 drop-shadow-2xl">
+          AvengeStore
+        </h1>
       </div>
       <div className="navigation w-[40%]">
         <nav className="flex-between">
           <div className="flex-center">
-            {isSearch && <input type="text" placeholder='search' className='w-[60px] text-xl'/>}
+            {isSearch && (
+              <input
+                type="text"
+                placeholder="search"
+                className="w-[60px] text-xl"
+              />
+            )}
             <img
               src="/svgs/search.svg"
               alt=""
               width={25}
               className=" transition-all hover:scale-125"
-              onClick={() =>setisSearch(!isSearch)}
+              onClick={() => setisSearch(!isSearch)}
             />
           </div>
           <Link href="./" className="font-descript text-2xl ">
