@@ -1,18 +1,17 @@
 'use client'
 import React, { useRef, useState } from 'react'
 import Link from 'next/link';
-import { Input } from 'postcss';
 
 const ShopHeader = () => {
   const [isSearch, setisSearch] = useState(false);
   const first = useRef();
   return (
-    <div className="text-black  min-h-[60px] flex-between mx-8">
+    <div className="text-black bg-headBg min-h-[60px] flex-between px-8">
       <div className="logo flex-center">
         <div className="relative w-[80px] overflow-hidden">
           <img
             src="/svgs/blob.svg"
-            className="absolute h-full w-full z-[-10]"
+            className="absolute h-full w-full"
           ></img>
           <svg
             viewBox="0 0 76 76"
@@ -43,12 +42,12 @@ const ShopHeader = () => {
             </g>
           </svg>
         </div>
-        <h1 className="self-center text-[30px] text-red-600">AvengeStore</h1>
+        <h1 className="self-center text-[30px] text-red-600 drop-shadow-2xl">AvengeStore</h1>
       </div>
       <div className="navigation w-[40%]">
         <nav className="flex-between">
           <div className="flex-center">
-            {isSearch && <input type="text" placeholder='search' className='w-[30px] text-xl'/>}
+            {isSearch && <input type="text" placeholder='search' className='w-[60px] text-xl'/>}
             <img
               src="/svgs/search.svg"
               alt=""
