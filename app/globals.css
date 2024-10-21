@@ -262,6 +262,7 @@ svg:hover path{
   font-weight: bold;
   font-size: large;
   transition: .5s;
+  z-index: 100;
 }
 .arrows button:hover{
   background-color: #eee;
@@ -284,5 +285,19 @@ svg:hover path{
 @keyframes showContent {
   to{
     opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
   }
+}
+.carousel .list .item:nth-child(1) .title{
+  animation-delay: 1.2s;
+}
+.carousel .list .item:nth-child(1) .brief{
+  animation-delay: 1.4s;
+}
+.carousel .list .item:nth-child(1) .des{
+  animation-delay: 1.6s;
+}
+.carousel .list .item:nth-child(1) .buttons{
+  animation-delay: 1.8s;
 }
