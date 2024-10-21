@@ -11,6 +11,9 @@
   src: url(/font/Descript/AfterDisaster-BzG3.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -166,3 +169,34 @@ svg:hover path{
     border-radius: 100% 56% 56% 100% /  100% 100% 56% 56%;
   }
 } */
+
+.carousel .list .item .content .title{
+  font-weight: bold;
+  font-size: 5em;
+  line-height: 1.3em;
+}
+.carousel .list .item .content .brief{
+  font-weight: bold;
+  font-size: 3em;
+  color: orangered;
+}
+.carousel .list .item .content .buttons{
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+.carousel .list .item .content button{
+  border: none;
+  background-color: #eee;
+  letter-spacing: 3px;
+  font-family: Poppins;
+  font-weight: 500;
+  color: black;
+}
+.carousel .list .item .content button:nth-child(2){
+  background-color: transparent;
+  color: aliceblue;
+  border: 1px solid #eee;
+}
