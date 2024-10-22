@@ -3,7 +3,7 @@ import React from 'react'
 const ImageCatalog = () => {
   return (
     <div className="bg-black text-white font-mono ">
-      <div className="carousel w-[100vw] h-[100vh] overflow-hidden relative">
+      <div className="carousel w-[100vw] h-[100vh] overflow-hidden relative prev">
         <div className="list -z-10">
           <div className="item absolute inset-0">
             <img
@@ -113,13 +113,6 @@ const ImageCatalog = () => {
         </div>
         <div className="thumbs">
           <div className="item">
-            <img src="\marvimgs\carousel\dead.jpg" alt="dead" />
-            <div className="content">
-              <div className="title">DeadBoy</div>
-              <div className="desc">My Description</div>
-            </div>
-          </div>
-          <div className="item">
             <img src="\marvimgs\carousel\spider.jpg" alt="dead" />
             <div className="content">
               <div className="title">Web</div>
@@ -147,11 +140,19 @@ const ImageCatalog = () => {
               <div className="desc">My Description</div>
             </div>
           </div>
+          <div className="item">
+            <img src="\marvimgs\carousel\dead.jpg" alt="dead" />
+            <div className="content">
+              <div className="title">DeadBoy</div>
+              <div className="desc">My Description</div>
+            </div>
+          </div>
         </div>
         <div className="arrows">
           <button className="prev"> &lt; </button>
           <button className="next"> &gt; </button>
         </div>
+        <div className="time"></div>
       </div>
     </div>
   );
